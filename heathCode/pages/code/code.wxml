@@ -3,58 +3,22 @@
   <view class="tittle">
   <text>{{name}}</text>
   </view>
+  <!-- 健康码二维码 -->
   <view class="[{{statuscolor}},'jkcode']"  >
     <canvas canvas-id="qrcode" class="qrcode"/>
     <!-- <image class="code" stc="/images/greencode.svg"/> -->
     <image class="refresh" src="/images/refresh.jpg" mode=""/>
   </view>
+  <!-- 组件：核酸检测记录 -->
   <box testing_organization="{{testing_organization}}" resulttext="{{resulttext}}" created_at="{{created_at}}"></box>
-
+  <!-- 疫苗接种记录 -->
   <view class="module" bind:tap="unfinished">
     <view class="module-tittle">
       疫苗接种记录
     </view>
   </view>
-
-  <view class="icons">
-    <view class="nav" bind:tap="goto" data-page="travelcode">
-      <view class="imgbg">
-        <image src="/images/icon1.png" mode=""/>
-      </view>
-      <text>行程码展示</text>
-      
-    </view>
-    <view class="nav" bind:tap="goto" data-page="detect">
-      <view class="imgbg">
-        <image src="/images/icon2.png" mode=""/>
-      </view>
-      <text>查看核酸结果</text>
-    </view>
-    <view class="nav" bind:tap="unfinished">
-      <view class="imgbg">
-        <image src="/images/icon3.png" mode=""/>
-      </view>
-      <text>查看核酸点</text>
-    </view>
-    <view class="nav" bind:tap="unfinished" >
-      <view class="imgbg">
-        <image src="/images/icon4.png" mode=""/>
-      </view>
-      <text>预约疫苗接种</text>
-    </view>
-    <view class="nav" bind:tap="scanCode" data-page="venuecode">
-      <view class="imgbg">
-        <image src="/images/icon5.png" mode=""/>
-      </view>
-      <text>扫描场所码</text>
-    </view>
-    <view class="nav" bind:tap="unfinished" >
-      <view class="imgbg">
-        <image src="/images/icon6.png" mode=""/>
-      </view>
-      <text>我的疑问</text>
-    </view>
-  </view>
+  <!-- 组件：其他功能导航栏 -->
+  <nav></nav>
 
 </view>
 

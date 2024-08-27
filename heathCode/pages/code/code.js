@@ -61,26 +61,7 @@ Page({
       }),
     })
   },
-  scanCode(){
-    wx.scanCode({
-      success (res) {
-        app.myrequest({
-          url:'http://graywolf.top:6201/place-code/scanCode',
-          method:'POST',
-          data:{
-            pid:0
-          },
-          success:(data=>{
-            if(data.data.code==200)
-            wx.showToast({
-              title: '场所码扫描成功',
-              icon:'none'
-            })
-          })
-        })
-      },
-    })
-  },
+
   getLastNucleicAcidTestRecord(){
     app.myrequest({
       url: 'http://graywolf.top:6201/nucleic-acids/getLastNucleicAcidTestRecord',
