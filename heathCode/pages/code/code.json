@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "box":"../../components/box"
+  },
   "navigationBarBackgroundColor": "#476FDE",
   "navigationBarTextStyle": "white"
 }
